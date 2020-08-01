@@ -7,12 +7,9 @@
   <text class="searchtext">搜索</text>
   <input class="input1" name="username" placeholder="请输入用户名" bindinput="userNameInput"></input>
 </view>
-<text>我的第一个小程序2</text>
+<text>第二个版本</text>
 <map></map>
-<view class="wrapper">
-  <view>这里是组件的内部节点</view>
-  <slot></slot>
-</view>
+
 <view>
   <component-tag-name>
     <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
