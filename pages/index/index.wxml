@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="imagebox">
+  <image class="image" src="../../images/background.jpg"></image>
+</view>
+<view class="searchbox">
+  <image class="searchimg" src="../../images/searchimg1.png"></image>
+  <text class="searchtext">搜索</text>
+  <input class="input1" name="username" placeholder="请输入用户名" bindinput="userNameInput"></input>
+</view>
+<text>我的第一个小程序2</text>
+<map></map>
+<view class="wrapper">
+  <view>这里是组件的内部节点</view>
+  <slot></slot>
+</view>
+<view>
+  <component-tag-name>
+    <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
+    <view>这里是插入到组件slot中的内容</view>
+  </component-tag-name>
+</view>
+<view class="box1"> 
+  <text>商品名称</text>
+  <view>商品价格</view>
+</view>
+

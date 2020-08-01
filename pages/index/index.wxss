@@ -1,0 +1,39 @@
+/**index.wxss**/
+.imagebox{
+  color: rgb(120, 8, 134);
+  
+}
+.searchtext{
+  color: #040e0a;
+  font-size: 40rpx;
+}
+.searchbox{
+  background-color: blanchedalmond;
+  border: 1rpx solid black;
+  border-radius: 10rpx;
+  width: 90%;
+  display: flex;
+}
+.input1{
+  font-size: 40rpx;
+}
+image{
+  height: 400rpx;
+}
+
+.searchimg{
+  height: 60rpx;
+  width: 60rpx;
+}
+.text3{
+  color: yellow;
+  height: 222rpx;
+  background-color: tomato;
+  text-align: center;/*位置对齐*/
+}
+.box1{
+  background-color: rgb(158, 209, 205);
+  height: 300rpx;
+  border-radius: 10%;/*边界的圆角*/
+  border: 1rpx solid rgba(56, 46, 46, 0.062);
+}
