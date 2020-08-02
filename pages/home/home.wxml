@@ -1,7 +1,17 @@
 <!--pages/home/home.wxml-->
-<view class="imagebox">
-  <image class="image" src="../../images/background.jpg"></image>
+<view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="false"
+        autoplay="true" interval="2000" duration="500">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>  
 </view>
+
 <view class="searchbox">
   <image class="searchimg" src="../../images/searchimg1.png"></image>
   <text class="searchtext">搜索</text>

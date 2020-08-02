@@ -1,11 +1,17 @@
 // pages/home/home.js
 Page({
-
+  
+  
   /**
    * 页面的初始数据
    */
   data: {
-
+      background: ['/images/home/home-swiper1-photo1.jpg', '/images/home/home-swiper1-photo2.jpg', '/images/home/home-swiper1-photo3.jpg'],
+      indicatorDots: true,
+      vertical: false,
+      autoplay: false,
+      interval: 2000,
+      duration: 500
   },
 
   /**
