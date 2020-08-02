@@ -1,0 +1,29 @@
+<!--pages/home/home.wxml-->
+<view class="imagebox">
+  <image class="image" src="../../images/background.jpg"></image>
+</view>
+<view class="searchbox">
+  <image class="searchimg" src="../../images/searchimg1.png"></image>
+  <text class="searchtext">搜索</text>
+  <input class="input1" name="username" placeholder="请输入用户名" bindinput="userNameInput"></input>
+  <image class="searchimg" src="../../images/weizhi.png"></image>
+</view>
+<scroll-view class="scroll-view_H" scroll-x="true" >
+          <view id="demo1" class="scroll-view-item_H demo-text-1">首页</view>
+          <view id="demo2"  class="scroll-view-item_H demo-text-2">推荐</view>
+          <view id="demo3" class="scroll-view-item_H demo-text-3">热门</view>
+          <view id="demo4" class="scroll-view-item_H demo-text-4">玄幻</view>
+          <view id="demo5" class="scroll-view-item_H demo-text-5">科学</view>
+          <view id="demo6" class="scroll-view-item_H demo-text-6">搞笑</view>
+</scroll-view>
+<view>
+  <component-tag-name>
+    <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
+    <view>这里是插入到组件slot中的内容</view>
+  </component-tag-name>
+</view>
+<view class="box1"> 
+  <text>商品名称</text>
+  <view>商品价格</view>
+</view>
+<view></view>
