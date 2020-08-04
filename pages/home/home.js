@@ -7,13 +7,21 @@ Page({
    */
   data: {
       background: ['/images/home/home-swiper1-photo1.jpg', '/images/home/home-swiper1-photo2.jpg', '/images/home/home-swiper1-photo3.jpg'],
-      indicatorDots: true,
+      num: 0,
+      indicatorDots: false,
       vertical: false,
       autoplay: false,
+      circular: true,
       interval: 2000,
       duration: 500
   },
-
+  swiperindicatorchange(e){
+    this.setData({
+      num : e.detail.current
+    });
+        
+  
+  },
   /**
    * 生命周期函数--监听页面加载
    */

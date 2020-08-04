@@ -1,39 +1,170 @@
 <!--pages/home/home.wxml-->
-<view class="page-body">
-    <view class="page-section page-section-spacing swiper">
-      <swiper indicator-dots="false"
-        autoplay="true" interval="2000" duration="500">
-        <block wx:for="{{background}}" wx:key="*this">
-          <swiper-item>
-            <image src="{{item}}"></image>
-          </swiper-item>
-        </block>
-      </swiper>
-    </view>  
-</view>
+<view class="container">
+	<view class="page-body">
+		<view class="page-section page-section-spacing swiper">
+			<swiper indicator-dots="{{indicatorDots}}" previous-margin="100rpx" next-margin="100rpx" circular="{{circular}}" autoplay="true" interval="{{interval}}" duration="{{duration}}" bindchange="swiperindicatorchange">
+				<block wx:for="{{background}}" wx:key="*this">
+					<swiper-item>
+						<image src="{{item}}"></image>
+					</swiper-item>
+				</block>
+			</swiper>
+			<view class="indicatorDots">
+				<view class="{{index == num ? 'active':''}}" wx:for="{{background}}" wx:key="*this"></view>
+			</view>
+		</view>
+	</view>
 
-<view class="searchbox">
-  <image class="searchimg" src="../../images/searchimg1.png"></image>
-  <text class="searchtext">搜索</text>
-  <input class="input1" name="username" placeholder="请输入用户名" bindinput="userNameInput"></input>
-  <image class="searchimg" src="../../images/weizhi.png"></image>
+	<view class="searchbox">
+		<image class="searchimg" src="../../images/searchimg1.png"></image>
+		<text class="searchtext">搜索1</text>
+		<input class="input1" name="username" placeholder="请输入用户名" bindinput="userNameInput"></input>
+		<image class="searchimg" src="../../images/weizhi.png"></image>
+	</view>
+	<scroll-view class="scroll-view_H" scroll-x="true">
+		<view id="demo1" class="scroll-view-item_H demo-text-1">首页</view>
+		<view id="demo2" class="scroll-view-item_H demo-text-2">推荐</view>
+		<view id="demo3" class="scroll-view-item_H demo-text-3">热门</view>
+		<view id="demo4" class="scroll-view-item_H demo-text-4">玄幻</view>
+		<view id="demo5" class="scroll-view-item_H demo-text-5">科学</view>
+		<view id="demo6" class="scroll-view-item_H demo-text-6">搞笑</view>
+	</scroll-view>
+  <view class="show">
+    <view>
+      <image src="/images/home/home-shouye.png"></image>
+      <view>首页</view>
+    </view>
+     <view>
+      <image src="/images/home/home-tuijian.png"></image>
+      <view>推荐</view>
+    </view>
+     <view>
+      <image src="/images/home/home-remen.png"></image>
+      <view>热门</view>
+    </view>
+     <view>
+      <image src="/images/home/home-xinping.png"></image>
+      <view>新品</view>
+    </view>
+  </view>
+  <view class="block1">
+    <view class="recommend">
+      <image class="recommend-image" src="/images/home/block1.png"></image>
+      <view class="recommend-text">推荐精品</view>
+      <view class="recommend-lot">更多></view>
+    </view>
+    <view class="recommendthing">
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing1.jpg"></image>
+        <view class="thing-text">斗破苍穹</view>
+        <view class="thing-number">第303回 苏醒</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing2.jpg"></image>
+        <view class="thing-text">武动乾坤</view>
+        <view class="thing-number">第277回 五位种子选手3</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing3.jpg"></image>
+        <view class="thing-text">神印王座</view>
+        <view class="thing-number">第502回 神圣巨龙</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing4.jpg"></image>
+        <view class="thing-text">龙王传说</view>
+        <view class="thing-number">第286回 金色光芒2</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing5.jpg"></image>
+        <view class="thing-text">绝世唐门</view>
+        <view class="thing-number">第553回 核心区2</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing6.jpg"></image>
+        <view class="thing-text">斗罗大陆</view>
+        <view class="thing-number">第258回 艰难的决定2</view>
+      </view>
+    </view>
+  </view>
+  <view class="block2">
+    <view class="recommend">
+      <image class="recommend-image" src="/images/home/block2.png"></image>
+      <view class="recommend-text">新品上架</view>
+      <view class="recommend-lot">更多></view>
+    </view>
+    <view class="recommendthing">
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing1.jpg"></image>
+        <view class="thing-text">斗破苍穹</view>
+        <view class="thing-number">第303回 苏醒</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing2.jpg"></image>
+        <view class="thing-text">武动乾坤</view>
+        <view class="thing-number">第277回 五位种子选手3</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing3.jpg"></image>
+        <view class="thing-text">神印王座</view>
+        <view class="thing-number">第502回 神圣巨龙</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing4.jpg"></image>
+        <view class="thing-text">龙王传说</view>
+        <view class="thing-number">第286回 金色光芒2</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing5.jpg"></image>
+        <view class="thing-text">绝世唐门</view>
+        <view class="thing-number">第553回 核心区2</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing6.jpg"></image>
+        <view class="thing-text">斗罗大陆</view>
+        <view class="thing-number">第258回 艰难的决定2</view>
+      </view>
+    </view>
+  </view>
+  <view class="block3">
+    <view class="recommend">
+      <image class="recommend-image" src="/images/home/block3.png"></image>
+      <view class="recommend-text">热门精品</view>
+      <view class="recommend-lot">更多></view>
+    </view>
+    <view class="recommendthing">
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing1.jpg"></image>
+        <view class="thing-text">斗破苍穹</view>
+        <view class="thing-number">第303回 苏醒</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing2.jpg"></image>
+        <view class="thing-text">武动乾坤</view>
+        <view class="thing-number">第277回 五位种子选手3</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing3.jpg"></image>
+        <view class="thing-text">神印王座</view>
+        <view class="thing-number">第502回 神圣巨龙</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing4.jpg"></image>
+        <view class="thing-text">龙王传说</view>
+        <view class="thing-number">第286回 金色光芒2</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing5.jpg"></image>
+        <view class="thing-text">绝世唐门</view>
+        <view class="thing-number">第553回 核心区2</view>
+      </view>
+      <view class="thing">
+        <image class="thing1-doupo" src="/images/home/block1-thing6.jpg"></image>
+        <view class="thing-text">斗罗大陆</view>
+        <view class="thing-number">第258回 艰难的决定2</view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom">
+    <image class="bottom-image" src="/images/home/bottom.jpg"></image>
+  </view>
 </view>
-<scroll-view class="scroll-view_H" scroll-x="true" >
-          <view id="demo1" class="scroll-view-item_H demo-text-1">首页</view>
-          <view id="demo2"  class="scroll-view-item_H demo-text-2">推荐</view>
-          <view id="demo3" class="scroll-view-item_H demo-text-3">热门</view>
-          <view id="demo4" class="scroll-view-item_H demo-text-4">玄幻</view>
-          <view id="demo5" class="scroll-view-item_H demo-text-5">科学</view>
-          <view id="demo6" class="scroll-view-item_H demo-text-6">搞笑</view>
-</scroll-view>
-<view>
-  <component-tag-name>
-    <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
-    <view>这里是插入到组件slot中的内容</view>
-  </component-tag-name>
-</view>
-<view class="box1"> 
-  <text>商品名称</text>
-  <view>商品价格</view>
-</view>
-<view></view>

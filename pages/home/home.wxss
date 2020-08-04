@@ -1,8 +1,10 @@
 /* pages/home/home.wxss */
-.imagebox{
-  color: rgb(120, 8, 134);
+.container{
+  width: 100%;
+  padding: 10rpx 0rpx;
   
 }
+/*---------------搜索框--------------*/
 .searchtext{
   color: #2C2C2C;
   font-size: 40rpx;
@@ -16,6 +18,7 @@
   height: 80rpx;
   display: flex;
   margin-left: 20rpx;
+  margin-top: 20rpx;
 }
 .input1{
   font-size: 40rpx;
@@ -23,38 +26,76 @@
   margin-top: 10rpx;
  border-right: 1rpx solid rgba(100, 98, 98, 0.568);
 }
-/*上面的图片切换栏*/
-swiper,swiper-item,image{
-  width:100%;
-  height: 450rpx;
- 
-}
-
 .searchimg{
   height: 60rpx;
   width: 60rpx;
   margin-top: 10rpx;
   margin-left: 10rpx;
 }
-.text3{
-  color: yellow;
-  height: 222rpx;
-  background-color: tomato;
-  text-align: center;/*位置对齐*/
+
+/*---------------上面的图片切换栏---------------*/
+.page-body,swiper,image{
+  
+  width:98%;
+  height: 360rpx;
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  border-radius: 30rpx;
 }
+.swiper{
+  position: relative;
+}
+.indicatorDots{
+  position: absolute;
+  right: 40%;
+  bottom: 20rpx;
+}
+.indicatorDots view{
+  width: 20rpx;
+  height: 20rpx;
+  background: rgb(112, 110, 110);
+  border-radius: 20rpx;
+  float: left;
+  margin: 0rpx 10rpx;
+  border-width: 20rpx;
+  transition: width 0.5s;
+}
+.indicatorDots view.active{
+  width: 36rpx;
+  background: rgb(243, 198, 130);
+}
+/*---------------目录栏---------------*/
+.show{
+  padding: 20rpx 0rpx;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;/*空间填充*/
+}
+.show>view{
+  width: 20%;
+  text-align: center;
+}
+.show>view>view:hover{
+  color: #02c7f8;
+  border: 1rpx solid rgba(68, 64, 64, 0.062);
+}
+.show>view image{
+  width: 100%;
+  display: block;
+  height: 100rpx;
+}
+/*---------------滚动容器---------------*/
 .box1{/*滚动容器的节点框*/
   background-color: rgb(158, 209, 205);
   height: 300rpx;
   border-radius: 10%;/*边界的圆角*/
   border: 1rpx solid rgba(68, 64, 64, 0.062);
 }
-.page-section-spacing{
-  margin-top: 60rpx;
-}
+
 .scroll-view_H{/*滚动的容器*/
   white-space: nowrap;
   border-bottom: 1rpx solid black;
   height: 120rpx;
+  margin-top: 10rpx;
 }
 .scroll-view-item{
   height: 300rpx;
@@ -72,5 +113,153 @@ swiper,swiper-item,image{
 }
 .scroll-view-item_H:hover{/*点击实现颜色变化*/
   background-color: #02c7f8;
-  border:1rpx solid #81f5f5;
+  border: 1rpx solid rgba(68, 64, 64, 0.062);
+}
+
+/*---------------block1---------------*/
+.block1{
+  width: 100%;
+  border-bottom: 1rpx solid rgb(71, 71, 73);
+}
+.block1 .recommend{
+  width: 100%;
+  display: flex;
+  position: relative;
+  border-top: 1rpx solid rgb(71, 71, 73);
+}
+.block1 .recommend-image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.block1 .recommend .recommend-text{
+  line-height: 100rpx;
+}
+.block1 .recommend-lot{
+  position: absolute;
+  right: 10rpx;
+  bottom: 40%;
+  font-size: 30rpx;
+  color: #737776;
+}.block1 .recommendthing{
+  padding: 20rpx 0rpx;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;/*空间填充*/
+  flex-wrap: wrap;
+}
+.block1>.recommendthing>view{
+  width: 30%;
+  margin-top: 20rpx;
+}
+.block1>.recommendthing>view image{
+  height: 300rpx;
+}
+.block1>.recommendthing>view>.thing-text{
+  font-size: 35rpx;
+}
+.block1>.recommendthing>view>.thing-number{
+  font-size: 30rpx;
+  color: #737776;
+}
+/*---------------block2---------------*/
+.block2{
+  width: 100%;
+  border-bottom: 1rpx solid rgb(71, 71, 73);
+}
+.block2 .recommend{
+  width: 100%;
+  display: flex;
+  position: relative;
+  border-top: 1rpx solid rgb(71, 71, 73);
+}
+.block2 .recommend-image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.block2 .recommend .recommend-text{
+  line-height: 100rpx;
+}
+.block2 .recommend-lot{
+  position: absolute;
+  right: 10rpx;
+  bottom: 40%;
+  font-size: 30rpx;
+  color: #737776;
+}.block2 .recommendthing{
+  padding: 20rpx 0rpx;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;/*空间填充*/
+  flex-wrap: wrap;
+}
+.block2>.recommendthing>view{
+  width: 30%;
+  margin-top: 20rpx;
+}
+.block2>.recommendthing>view image{
+  height: 300rpx;
+}
+.block2>.recommendthing>view>.thing-text{
+  font-size: 35rpx;
+  
+}
+.block2>.recommendthing>view>.thing-number{
+  font-size: 30rpx;
+  color: #737776;
+}
+/*---------------block3---------------*/
+.block3{
+  width: 100%;
+  border-bottom: 1rpx solid rgb(71, 71, 73);
+}
+.block3 .recommend{
+  width: 100%;
+  display: flex;
+  position: relative;
+  border-top: 1rpx solid rgb(71, 71, 73);
+}
+.block3 .recommend-image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.block3 .recommend .recommend-text{
+  line-height: 100rpx;
+}
+.block3 .recommend-lot{
+  position: absolute;
+  right: 10rpx;
+  bottom: 40%;
+  font-size: 30rpx;
+  color: #737776;
+}.block3 .recommendthing{
+  padding: 20rpx 0rpx;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;/*空间填充*/
+  flex-wrap: wrap;
+}
+.block3>.recommendthing>view{
+  width: 30%;
+  margin-top: 20rpx;
+}
+.block3>.recommendthing>view image{
+  height: 300rpx;
+}
+.block3>.recommendthing>view>.thing-text{
+  font-size: 35rpx;
+  
+}
+.block3>.recommendthing>view>.thing-number{
+  font-size: 30rpx;
+  color: #737776;
+}
+/*---------------bottom---------------*/
+.bottom{
+  width: 100%;
+  justify-content: space-around;
+}
+.bottom>.bottom-image{
+  width: 150rpx;
+  height: 100rpx;
+  margin: 0rpx 42%;
 }
